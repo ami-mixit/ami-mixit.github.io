@@ -3,26 +3,81 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
-Audio Demos for Adapting Speech Separation to Real-World Meetings Using Mixture Invariant Training
+Adapting Speech Separation to Real-World Meetings Using Mixture Invariant Training
 </title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="container">
-  <p class="section"><h1>Audio Demos Index</h1></p>
-  <table width="600" height="40" border="0">
-      <tr><td><a href="synthetic_ami_edinburgh_index.html">Synthetic AMI (Edinburgh)</a></td></tr>
-      <td>&nbsp;</td>
-      <tr><td><a href="synthetic_ami_idiap_index.html">Synthetic AMI (Idiap)</a></td></tr>
-      <td>&nbsp;</td>
-      <tr><td><a href="synthetic_ami_tno_index.html">Synthetic AMI (TNO)</a></td></tr>
-      <td>&nbsp;</td>
-      <tr><td><a href="real_ami_edinburgh_index.html">Real AMI (Edinburgh)</a></td></tr>
-      <td>&nbsp;</td>
-      <tr><td><a href="real_ami_idiap_index.html">Real AMI (Idiap)</a></td></tr>
-      <td>&nbsp;</td>
-      <tr><td><a href="real_ami_tno_index.html">Real AMI (TNO)</a></td></tr>
+  <p>&nbsp;</p>
+  <p><span class="title">Adapting Speech Separation to Real-World Meetings Using Mixture Invariant Training</span></p>
+  <br />
+  <table border="0" align="center" class="authors">
+    <tr align="center">
+      <td><a href="http://aswinsivaraman.com/">Aswin Sivaraman<sup>1,2,*</sup></a></td>
+      <td><a href="https://ai.google/research/people/ScottWisdom">Scott Wisdom<sup>1</sup></a></td>
+      <td><a href="https://research.google/people/106904/">Hakan Erdogan<sup>1</sup></a></td>
+      <td><a href="https://ai.google/research/people/106072">John R. Hershey<sup>1</sup></a></td>
+    </tr>
   </table>
+  <table border="0" align="center" class="affiliations">
+    <tr>
+      <!--
+      <td align="center"><img src="images/logo_research.png" height="40" alt=""/></td>
+      -->
+      <td align="left"><a href="https://research.google.com/"><sup>1</sup>Google Research</a></td>
+    </tr>
+  </table>
+  <table border="0" align="center" class="affiliations">
+  <tr>
+    <td align="center"><a href="https://www.indiana.edu/"><sup>2</sup>Indiana University</a></td>
+    </tr>
+  </table>
+  <table border="0" align="center" class="affiliations">
+  <tr>
+    <td align="center">*Work done during an internship at Google.</td>
+  </tr>
+  </table>
+  <br />
+  <div align="center">
+  <img  src="./images/ami_mixit_diagram.png" alt="Training configuration" width="1000">
+  Experiment configuration. We train a separation model <em>f</em> using either one or both datasets paired with appropriate loss functions: supervised PIT with reverberant Libri2Mix (RL2M) or unsupervised MixIT with AMI. Model parameters &theta; can either be randomly initialized or warm-started from another model pretrained with unsupervised MixIT on AudioSet.
+  </div>
+  <br />
+  <p><span class="section">Abstract</span></p>
+  <p>The recently-proposed mixture invariant training (MixIT) is an unsupervised method for training single-channel sound separation models in the sense that it does not require ground-truth isolated reference sources. In this paper, we investigate using MixIT to adapt a separation model on real far-field overlapping reverberant and noisy speech data from the AMI Corpus. The models are tested on real AMI recordings containing overlapping speech, and are evaluated subjectively by human listeners. To objectively evaluate our models, we also devise a synthetic AMI test set. For human evaluations on real recordings, we also propose a modification of the standard MUSHRA protocol to handle imperfect reference signals, which we call MUSHIRA. Holding network architectures constant, we find that a fine-tuned semi-supervised model yields the largest SI-SNR improvement, PESQ scores, and human listening ratings across synthetic and real datasets, outperforming unadapted generalist models trained on orders of magnitude more data. Our results show that unsupervised learning through MixIT enables model adaptation on real-world unlabeled spontaneous speech recordings.<br />
+  </p>
+  <p class="section">&nbsp;</p>
+  <p>&nbsp;</p>
+  <p class="section">Paper</p>
+  <table border="0">
+    <tbody>
+      <tr>
+        <td>&nbsp;</td>
+        <td><p>&quot;Adapting Speech Separation to Real-World Meetings Using Mixture Invariant Training&quot;,<br />
+            Aswin Sivaraman, Scott Wisdom, Hakan Erdogan,John R. Hershey,<br />
+            Proc. ICASSP, May 2022, Singapore.</a></p>
+        <p>[<a href="https://arxiv.org/abs/2110.10739">PDF</a>]</p></td>
+      </tr>
+    </tbody>
+  </table>
+  <br />
+  <p class="section">Audio Demos</p>
+  <table width="600" height="40" border="0">
+      <td><a href="synthetic_ami_edinburgh_index.html">Synthetic AMI (Edinburgh)</a></td>
+      <td><a href="synthetic_ami_idiap_index.html">Synthetic AMI (Idiap)</a></td>
+      <td><a href="synthetic_ami_tno_index.html">Synthetic AMI (TNO)</a></td>
+      <td><a href="real_ami_edinburgh_index.html">Real AMI (Edinburgh)</a></td>
+      <td><a href="real_ami_idiap_index.html">Real AMI (Idiap)</a></td>
+      <td><a href="real_ami_tno_index.html">Real AMI (TNO)</a></td>
+  </table>
+  <p class="section">&nbsp;</p>
+  <p class="section">Dataset Recipe</p>
+  <table width="600" height="40" border="0">
+    <td>Synthetic and real AMI recipes coming soon.</td>
+  </table>
+  <p class="section">&nbsp;</p>
+  <p align="center" class="date">Last updated: May 2022</p>
 </div>
 </body>
 </html>
